@@ -11,13 +11,14 @@ import org.apache.kafka.common.errors.WakeupException;
 public class KafkaConsumerTest {
 
 	private static final String topicName = "conso-maisons";
+	private static final String kafkaServerIP = "localhost:9092";
 
 	public static void main(String[] args) {
 	
 		
 	
 		Properties props = new Properties();
-		props.put("bootstrap.servers", "localhost:9092");
+		props.put("bootstrap.servers", kafkaServerIP);
 		props.put("group.id", "groupName");
 		props.put("enable.auto.commit", "true");
 		props.put("auto.commit.interval.ms", "1000");
