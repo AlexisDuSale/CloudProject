@@ -104,11 +104,6 @@ public class Test {
 					ConsumerStrategies.<String, String>Subscribe(topics, kafkaParams)
 					);
 
-			File fileDestination = new File("donnees.txt");
-			boolean bool = fileDestination.createNewFile();        
-			FileOutputStream fichierDest = new FileOutputStream(fileDestination);        
-			Path pathSource = FileSystems.getDefault().getPath(fichierDestination,"/part-00000");
-
 			messages.map(new Function<ConsumerRecord<String, String>, String>(){
 				@Override
 				public String call(ConsumerRecord<String, String> record) throws Exception {
