@@ -67,13 +67,13 @@ public class App {
 
 	
 	public static String addVip(String value) {
-       		if (value.contains(quartierVip) {
+       		if (value.contains(quartierVip)) {
 			value+=",vip";
 		}
 		else {
 			value+=",novip";
 		}
-		return value
+		return value;
 	}
 
 	public static void main(String[] args) {
